@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/Arduino.h
+windows.h
+-
+cstdint
+-
+
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/RF24.cpp
+iostream
+-
+RF24.h
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/RF24.h
+
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/RF24.h
+Arduino.h
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/Arduino.h
+globalMemory.h
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/globalMemory.h
+
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/globalMemory.h
+Arduino.h
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/Arduino.h
+
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/pumpSensorReceiverUnit.cpp
+pumpSensorReceiverUnit.h
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/pumpSensorReceiverUnit.h
+Arduino.h
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/Arduino.h
+string
+-
+RF24.h
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/RF24.h
+
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/pumpSensorReceiverUnit.h
+

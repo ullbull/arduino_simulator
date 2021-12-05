@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/Arduino.h
+windows.h
+-
+
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/RF24.h
+Arduino.h
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/Arduino.h
+
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/main.cpp
+iostream
+-
+RF24.h
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/RF24.h
+Arduino.h
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/Arduino.h
+thread
+-
+

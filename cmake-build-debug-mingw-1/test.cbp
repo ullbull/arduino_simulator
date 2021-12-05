@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="test"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option output="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/MinGW-w64/include"/>
+					<Add directory="c:\mingw-w64\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="c:\mingw-w64\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../include/c++/4.8.3/x86_64-w64-mingw32"/>
+					<Add directory="c:\mingw-w64\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="c:\mingw-w64\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include"/>
+					<Add directory="c:\mingw-w64\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include-fixed"/>
+					<Add directory="c:\mingw-w64\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test/fast">
+				<Option output="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/MinGW-w64/include"/>
+					<Add directory="c:\mingw-w64\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="c:\mingw-w64\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../include/c++/4.8.3/x86_64-w64-mingw32"/>
+					<Add directory="c:\mingw-w64\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="c:\mingw-w64\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include"/>
+					<Add directory="c:\mingw-w64\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include-fixed"/>
+					<Add directory="c:\mingw-w64\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 test/fast"/>
+					<CompileFile command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW-w64/bin/mingw32-make.exe -f &quot;C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw-1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/Arduino.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/Arduino.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/RF24.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/RF24.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/SPI.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/Transiver.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/Transiver.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/globalMemory.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/globalMemory.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/main.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/nRF24L01.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/pumpSensor.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/pumpSensor.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/pumpSensorReceiverUnit.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/pumpSensorReceiverUnit.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,3 @@
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw/CMakeFiles/test.dir
+C:/Users/UlrikKarlsson/CLionProjects/pumpTest/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
