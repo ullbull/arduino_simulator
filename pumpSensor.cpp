@@ -10,96 +10,128 @@
 #include "SPI.h"
 #include "nRF24L01.h"
 #include "RF24.h"
+#include "tools.h"
 
 namespace sensor {
     RF24 radio(9, 10);
     const byte address[6] = "00001";    //Byte of array representing the address. This is the address where we will send the data. This should be same on the receiving side.
-    int sensor_pin = 2;
+    int pumpSwitchPin = 2;
+    int ledRedPin = 5;
 
-    unsigned long lastPumpToggleTime;
-    unsigned long lastTransmitTime;
+    bool pumpIsOn = false;
+
+    unsigned long timeAtPumpOn;
+    unsigned long timeAtPumpOff;
+    unsigned long timeAtLastTransmit;
 
 //                                    sec   m h d
     unsigned int pumpToggleMinInterval = 1000 * 5;
 
 //                                    sec   m h d
-    unsigned int pumpToggleMaxInterval = 1000 * 20;
+    unsigned int pumpMaxOffTime = 1000 * 20;
 
     int transmitInterval = 1000 * 2;
     boolean pumpIsToggled = false;
+    int newPumpState = 0;
 
     std::string message = "State unknown";
 
     enum class State {
         ok,
         lowPressure,
-        noPumpActivity
+        noPumpActivity,
+        blinkLedOn,
+        blinkLedOff
     };
 
     State state = State::noPumpActivity;
+    State extra;
+
 
     void setup() {
-        pinMode(sensor_pin, INPUT);
+        pinMode(pumpSwitchPin, INPUT);
         Serial.begin(9600);
         radio.begin();
         radio.openWritingPipe(address);
         radio.setPALevel(RF24_PA_MIN);
         radio.stopListening();
 
-        lastPumpToggleTime = millis();
-        lastTransmitTime = millis();
+        timeAtPumpOn = millis();
+        timeAtPumpOff = millis();
+        timeAtLastTransmit = millis();
+        pumpIsOn = digitalRead(pumpSwitchPin);
     }
 
     unsigned long currentTime;
-    unsigned int timeSinceLastPumpToggle;
-    unsigned int timeSinceLastTransmit;
-    boolean alert = true;
+    unsigned int timeSinceLastPumpOn = 0;
+    unsigned int timeSinceLastPumpOff = 0;
+    unsigned int timeSinceLastTransmit = 0;
+    boolean readyToAlert = true;
     unsigned int errorToggles = 0;
 
     void loop() {
-
         currentTime = millis();
-        timeSinceLastPumpToggle = currentTime - lastPumpToggleTime;
-        timeSinceLastTransmit = currentTime - lastTransmitTime;
-        pumpIsToggled = digitalRead(sensor_pin);
+        newPumpState = digitalRead(pumpSwitchPin);
 
-        if (timeSinceLastPumpToggle > pumpToggleMaxInterval) {
-            if (alert) {
-                alert = false;
+        if (pumpIsOn) {
+            if (newPumpState == 0) {
+                // The pump was toggled off now
+                pumpIsOn = false;
+                timeAtPumpOff = currentTime;
+                Serial.println("Pump is off!");
+                blinkLedPumpOff(ledRedPin);
+                extra = State::blinkLedOff;
+                radio.write(&extra, 1);
+            }
+        } else {    // Pump is off
+            if (newPumpState == 1) {
+                // The pump was toggled on now
+                pumpIsOn = true;
+                timeAtPumpOn = currentTime;
+                Serial.println("Pump is on!");
+                blinkLedPumpOn(ledRedPin);
+                extra = State::blinkLedOn;
+                radio.write(&extra, 1);
+
+                if (timeSinceLastPumpOn < pumpToggleMinInterval) {
+                    // Pump toggles too often.
+                    errorToggles++;
+                    if (errorToggles >= 2) {
+                        message = "Low pressure";
+                        state = State::lowPressure;
+
+                    }
+                } else {
+                    message = "ok";
+                    state = State::ok;
+                    errorToggles = 0;
+                }
+
+                Serial.print("errorToggles = ");
+                Serial.println((int) errorToggles);
+                delay(500);
+
+            }
+        }
+
+        timeSinceLastPumpOn = currentTime - timeAtPumpOn;
+        timeSinceLastPumpOff = currentTime - timeAtPumpOff;
+        timeSinceLastTransmit = currentTime - timeAtLastTransmit;
+
+        if (timeSinceLastPumpOn > pumpMaxOffTime) {
+            if (readyToAlert) {
+                readyToAlert = false;
                 message = "No pump activity!";
                 state = State::noPumpActivity;
                 Serial.println(message.c_str());
             }
         } else {
-            alert = true;
-        }
-
-        if (pumpIsToggled) {
-            lastPumpToggleTime = currentTime;
-            Serial.println("Pump is toggled!");
-
-            if (timeSinceLastPumpToggle < pumpToggleMinInterval) {
-                // Pump toggles too often.
-                errorToggles++;
-                if (errorToggles >= 2) {
-                    message = "Low pressure";
-                    state = State::lowPressure;
-
-                }
-            } else {
-                message = "ok";
-                state = State::ok;
-                errorToggles = 0;
-            }
-
-            Serial.print("errorToggles = ");
-            Serial.println((int) errorToggles);
-            delay(500);
+            readyToAlert = true;
         }
 
         // Send status at a fixed interval
         if (timeSinceLastTransmit >= transmitInterval) {
-            lastTransmitTime = currentTime;
+            timeAtLastTransmit = currentTime;
             radio.write(message.c_str(), message.size());
             radio.write(&state, 1);
         }

@@ -127,6 +127,12 @@
 		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/pumpSensorReceiverUnit.h">
 			<Option target="test"/>
 		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/tools.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/tools.h">
+			<Option target="test"/>
+		</Unit>
 		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -296,6 +296,30 @@ pumpSensorReceiverUnit.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/pumpSensorReceiverUnit.cpp.s
 .PHONY : pumpSensorReceiverUnit.cpp.s
 
+tools.obj: tools.cpp.obj
+.PHONY : tools.obj
+
+# target to build an object file
+tools.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/tools.cpp.obj
+.PHONY : tools.cpp.obj
+
+tools.i: tools.cpp.i
+.PHONY : tools.i
+
+# target to preprocess a source file
+tools.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/tools.cpp.i
+.PHONY : tools.cpp.i
+
+tools.s: tools.cpp.s
+.PHONY : tools.s
+
+# target to generate assembly for a file
+tools.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/tools.cpp.s
+.PHONY : tools.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -326,6 +350,9 @@ help:
 	@echo ... pumpSensorReceiverUnit.obj
 	@echo ... pumpSensorReceiverUnit.i
 	@echo ... pumpSensorReceiverUnit.s
+	@echo ... tools.obj
+	@echo ... tools.i
+	@echo ... tools.s
 .PHONY : help
 
 

@@ -22,8 +22,7 @@ CMakeFiles/test.dir/main.cpp.obj: \
  ../RF24.h \
  ../globalMemory.h \
  ../main.cpp \
- ../pumpSensor.h \
- ../pumpSensorReceiverUnit.h
+ ../pumpSensor.h
 CMakeFiles/test.dir/pumpSensor.cpp.obj: \
  ../Arduino.h \
  ../RF24.h \
@@ -31,10 +30,15 @@ CMakeFiles/test.dir/pumpSensor.cpp.obj: \
  ../globalMemory.h \
  ../nRF24L01.h \
  ../pumpSensor.cpp \
- ../pumpSensor.h
+ ../pumpSensor.h \
+ ../tools.h
 CMakeFiles/test.dir/pumpSensorReceiverUnit.cpp.obj: \
  ../Arduino.h \
  ../RF24.h \
  ../globalMemory.h \
  ../pumpSensorReceiverUnit.cpp \
  ../pumpSensorReceiverUnit.h
+CMakeFiles/test.dir/tools.cpp.obj: \
+ ../Arduino.h \
+ ../tools.cpp \
+ ../tools.h

@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/main.cpp.obj"
   "CMakeFiles/test.dir/pumpSensor.cpp.obj"
   "CMakeFiles/test.dir/pumpSensorReceiverUnit.cpp.obj"
+  "CMakeFiles/test.dir/tools.cpp.obj"
   "libtest.dll.a"
   "test.exe"
   "test.exe.manifest"

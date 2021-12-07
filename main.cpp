@@ -4,10 +4,11 @@
 #include "RF24.h"
 
 #include "pumpSensor.h"
-#include "pumpSensorReceiverUnit.h"
+using namespace sensor;
 
-//using namespace sensor;
-using namespace receiver;
+//#include "pumpSensorReceiverUnit.h"
+//using namespace receiver;
+
 
 bool run = true;
 RF24 r(1,1);
