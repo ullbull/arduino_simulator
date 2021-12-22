@@ -7,6 +7,7 @@
 #include "Arduino.h"
 #include <string>
 #include "RF24.h"
+#include "tools.h"
 
 namespace receiver {
 
@@ -29,6 +30,8 @@ namespace receiver {
         ok,
         lowPressure,
         noPumpActivity,
+        blinkLedOn,
+        blinkLedOff,
         noRadio,
     };
     State state;
@@ -98,6 +101,7 @@ namespace receiver {
 
             Serial.print("ledPin: ");
             Serial.println(ledPin);
+            customAsyncBlinkLed(ledPin, 2, 500, 100);
         }
 
         delay(5);

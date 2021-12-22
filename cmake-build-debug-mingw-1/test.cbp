@@ -88,6 +88,12 @@
 		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/Arduino.h">
 			<Option target="test"/>
 		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/AsyncBlinker.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/AsyncBlinker.h">
+			<Option target="test"/>
+		</Unit>
 		<Unit filename="C:/Users/UlrikKarlsson/CLionProjects/pumpTest/RF24.cpp">
 			<Option target="test"/>
 		</Unit>

@@ -4,6 +4,16 @@
 
 #include "tools.h"
 #include "Arduino.h"
+#include <iostream>
+
+void customAsyncBlinkLed(int pin, int numberOfBlinks, int onTime, int offTime) {
+    static unsigned long timeAtLastRun = millis();
+    unsigned long currentTime = millis();
+
+
+
+    timeAtLastRun = currentTime;
+}
 
 void customBlinkLed(int pin, int numberOfBlinks, int onTime, int offTime) {
     int initialState = digitalRead(pin);

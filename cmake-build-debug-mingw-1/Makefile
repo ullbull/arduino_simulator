@@ -152,6 +152,30 @@ Arduino.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/Arduino.cpp.s
 .PHONY : Arduino.cpp.s
 
+AsyncBlinker.obj: AsyncBlinker.cpp.obj
+.PHONY : AsyncBlinker.obj
+
+# target to build an object file
+AsyncBlinker.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/AsyncBlinker.cpp.obj
+.PHONY : AsyncBlinker.cpp.obj
+
+AsyncBlinker.i: AsyncBlinker.cpp.i
+.PHONY : AsyncBlinker.i
+
+# target to preprocess a source file
+AsyncBlinker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/AsyncBlinker.cpp.i
+.PHONY : AsyncBlinker.cpp.i
+
+AsyncBlinker.s: AsyncBlinker.cpp.s
+.PHONY : AsyncBlinker.s
+
+# target to generate assembly for a file
+AsyncBlinker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/AsyncBlinker.cpp.s
+.PHONY : AsyncBlinker.cpp.s
+
 RF24.obj: RF24.cpp.obj
 .PHONY : RF24.obj
 
@@ -332,6 +356,9 @@ help:
 	@echo ... Arduino.obj
 	@echo ... Arduino.i
 	@echo ... Arduino.s
+	@echo ... AsyncBlinker.obj
+	@echo ... AsyncBlinker.i
+	@echo ... AsyncBlinker.s
 	@echo ... RF24.obj
 	@echo ... RF24.i
 	@echo ... RF24.s

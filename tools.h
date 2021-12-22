@@ -5,7 +5,7 @@
 #ifndef TEST_TOOLS_H
 #define TEST_TOOLS_H
 
-
+void customAsyncBlinkLed(int pin, int numberOfBlinks, int onTime, int offTime);
 void customBlinkLed(int pin, int numberOfBlinks, int onTime, int offTime);
 void blinkLedPumpOn(int pin);
 void blinkLedPumpOff(int pin);

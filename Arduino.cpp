@@ -44,6 +44,7 @@ int digitalRead(uint8_t pin) {
 
 void digitalWrite(uint8_t pin, uint8_t val) {
     gpio[pin] = val;
+    Serial::println(gpio[pin]);
 }
 
 Serial::Serial() {

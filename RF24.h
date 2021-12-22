@@ -8,6 +8,7 @@
 #include "globalMemory.h"
 
 const int RF24_PA_MIN = 1;
+const int RF24_PA_MAX = 2;
 const char Null = '<';
 
 class RF24 {

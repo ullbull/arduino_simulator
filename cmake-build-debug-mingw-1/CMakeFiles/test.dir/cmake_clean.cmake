@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/test.dir/Arduino.cpp.obj"
+  "CMakeFiles/test.dir/AsyncBlinker.cpp.obj"
   "CMakeFiles/test.dir/RF24.cpp.obj"
   "CMakeFiles/test.dir/Transiver.cpp.obj"
   "CMakeFiles/test.dir/globalMemory.cpp.obj"
